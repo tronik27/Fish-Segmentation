@@ -3,6 +3,19 @@
 
 This repository contains the implementation of the Segmentation and Classification road sign classifier. The German Traffic Sign Recognition Benchmark dataset (https://benchmark.ini.rub.de) was used for training and testing. It contains about 39000 training and 12500 test images belonging to 43 classes. The complexity of this dataset lies in the rather strong imbalance of the classes (see the figure below) so the class weights are applied during training.
 
+
+GTSRB dataset has this configuration:
+```
+├───Meta
+├───Test
+└───Train
+    ├───0
+    ├───1
+   ...
+    ├───41
+    └───42
+```
+
 When training a model, images for training are split into training and validation sets. Albumintations library (https://albumentations.ai/docs/api_reference/augmentations/) was used for image augmentation. As can be seen from the learning curves presented below, the classification quality metrics for the validation set were superior to those for the training set, which indicates that the model is not overfitting.
 
 ![img2.png](images/img2.PNG)
