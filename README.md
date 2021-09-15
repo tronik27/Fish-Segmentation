@@ -10,9 +10,9 @@ This section presents the results of the trained model obtained on the test set:
 
 *Segmentation loss: 0.022;*
 
-*Classification loss: 0.000;*
-
 *Segmentation IoU: 91.2%;*
+
+*Classification loss: 0.000;*
 
 *Classification F1 score: 100%;*
 
