@@ -1,6 +1,7 @@
 # Fish-Segmentation
 ![img13.png](images/img13.PNG)
-This repository contains script for large-scale  Segmentation and Classification
+
+This repository contains the implementation of the Segmentation and Classification road sign classifier. The German Traffic Sign Recognition Benchmark dataset (https://benchmark.ini.rub.de) was used for training and testing. It contains about 39000 training and 12500 test images belonging to 43 classes. The complexity of this dataset lies in the rather strong imbalance of the classes (see the figure below) so the class weights are applied during training.
 
 ## Using script
 
