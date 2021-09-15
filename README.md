@@ -6,11 +6,15 @@ This repository contains the implementation of the Segmentation and Classificati
 ## Testing
 This section presents the results of the trained model obtained on the test set: 
 
-*Loss: 0.13592;*
+*Loss: 0.022;*
 
-*Categorical accuracy: 98.779%;*
+*Segmentation loss: 0.022;*
 
-*F1 score: 98.780%;*
+*Classification loss: 0.000;*
+
+*Segmentation IoU: 91.2%;*
+
+*Classification F1 score: 100%;*
 
 Examples of image classification by model:
 
