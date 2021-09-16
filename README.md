@@ -1,8 +1,7 @@
 # Fish-Segmentation
 ![img13.png](images/img13.PNG)
 
-This repository contains the implementation of the Segmentation and Classification road sign classifier. The German Traffic Sign Recognition Benchmark dataset (https://benchmark.ini.rub.de) was used for training and testing. It contains about 39000 training and 12500 test images belonging to 43 classes. The complexity of this dataset lies in the rather strong imbalance of the classes (see the figure below) so the class weights are applied during training.
-
+This repository contains the implementation of the NN model for fish segmentation and classification. The Large Scale Fish Dataset (https://ieeexplore.ieee.org/abstract/document/9259867) was used for training and testing. It contains about 9000 images belonging to 9 classes. Feature of the current approach is the CNN architecture with two independent outputs for segmentation and classification. Such an architecture was implemented since each image in the dataset contained only an object of one class. 
 
 Large Scale Fish Dataset has this configuration:
 ```
@@ -36,7 +35,7 @@ E:.
     └───Trout GT
 ```
 
-When training a model, images for training are split into training and validation sets. Albumintations library (https://albumentations.ai/docs/api_reference/augmentations/) was used for image augmentation. As can be seen from the learning curves presented below, the classification quality metrics for the validation set were superior to those for the training set, which indicates that the model is not overfitting.
+Before use, the dataset is split into training, validation and test image sets. To do this, first, a list of all system paths for images and their corresponding masks is read. Then this list is divided into training, validation and test lists and saved to a file. Albumintations library (https://albumentations.ai/docs/api_reference/augmentations/) was used for image augmentation. A custom metric IoU implemented in the library segmentation models (https://segmentation-models.readthedocs.io/en/latest/index.html) was also used. As can be seen from the learning curves presented below, the classification and segmentation quality metrics for the validation set were mostly superior to those for the training set, which indicates that the model is not overfitting.
 
 ![img2.png](images/img2.PNG)
 
@@ -53,7 +52,7 @@ This section presents the results of the trained model obtained on the test set:
 
 *Classification F1 score: 100%;*
 
-Examples of image classification by model:
+Examples of image segmentation and classification by model:
 
 ![img1.png](images/img1.PNG)
 
